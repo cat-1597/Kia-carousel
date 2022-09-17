@@ -26,9 +26,15 @@
     display: none;
 }
 
-.carousel .carousel-item-visible {
-  display: block;  /*this positions images into a block*/
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+    display: none;
 }
+
+.carousel .carousel-item-visible {
+    display: block;
+}
+
 
 .carousel .carousel-item img {
   width: 100%; /*makes image smaller*/
