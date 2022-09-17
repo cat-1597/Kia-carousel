@@ -39,7 +39,7 @@ function moveToNextSlide() {
   
     if (slidePosition === totalSlides - 1) { /*1) Check if (slidePosition === totalSlides -1) (yes minus 1 because we start from 0 on 'slidePosition' - 
     so if the slide is the last one (after a user has clicked through all the 
-        slides and then hits next again) we must reset the 'slidePosition' to 0, 
+        slides and then hits next again) we/ must reset the 'slidePosition' to 0, 
         in turn taking them back to the first slide! */ 
         slidePosition = 0; /*if slide position equals total slide, go back to zero*/
     } else {
@@ -52,11 +52,11 @@ function moveToNextSlide() {
 
 
 function moveToPrevSlide() {
-    console.log("move to prev slide");
+    //console.log("move to prev slide");
 
 }
 
-console.log(totalSlides)
+//console.log(totalSlides)
 
 
 /*
