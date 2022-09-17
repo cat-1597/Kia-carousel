@@ -25,7 +25,7 @@
 
 
 
-const slides = document.getElementsByClassName('carousel-item'); //Adding event listener to retrieve photos by class name
+/*const slides = document.getElementsByClassName('carousel-item'); //Adding event listener to retrieve photos by class name
 
 let slidePosition = 0; ////The starting point of the slide index at 0 //want it to change
 
@@ -103,3 +103,23 @@ function moveToPrevSlide() {
     4) Test out your next button by clicking on it, you'll see there's some clean up to do in the next Scrimba cast!
 */
 
+const slides = document.getElementsByClassName('carousel-item');
+let slidePosition = 0;
+const totalSlides = slides.length;
+
+document.getElementById('carousel-button-next').addEventListener('click', moveToNextSlide);
+document.getElementById('carousel-button-prev').addEventListener('click', moveToPrevSlide);
+
+function moveToNextSlide() {
+    if (slidePosition === totalSlides - 1) {
+        slidePosition = 0;
+    } else {
+        slidePosition++;
+    }
+    
+    slides[slidePosition].classList.add("carousel-item-visible");
+}
+
+function moveToPrevSlide() {
+    
+}
