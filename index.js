@@ -36,25 +36,45 @@ document.getElementById('carousel-button-prev').addEventListener("click", moveTo
 document.getElementById('carousel-button-next').addEventListener("click", moveToPrevSlide); //button for event listener
 
 function moveToNextSlide() {
-  
-    if (slidePosition === totalSlides - 1) { /*1) Check if (slidePosition === totalSlides -1) (yes minus 1 because we start from 0 on 'slidePosition' - 
-    so if the slide is the last one (after a user has clicked through all the 
-        slides and then hits next again) we/ must reset the 'slidePosition' to 0, 
-        in turn taking them back to the first slide! */ 
-        slidePosition = 0; /*if slide position equals total slide, go back to zero*/
+    if (slidePosition === totalSlides - 1) {
+        slidePosition = 0;
     } else {
-        slidePosition ++; /*if NOT, then increment by 1*/
+        slidePosition++;
     }
-    slides[slidePosition].classList.add("carousel-item-visible"); /*with the array slides[slidesPosition] if 0, 1 or 2 if we r on that slide we want 
-    to make it visible*/
-
-        }
-
+    
+    slides[slidePosition].classList.add("carousel-item-visible");
+}
 
 function moveToPrevSlide() {
+    
+}
+
+
+
+
+
+
+
+// function moveToNextSlide() {
+  
+    // if (slidePosition === totalSlides - 1) { /*1) Check if (slidePosition === totalSlides -1) (yes minus 1 because we start from 0 on 'slidePosition' - 
+    // so if the slide is the last one (after a user has clicked through all the 
+        // slides and then hits next again) we/ must reset the 'slidePosition' to 0, 
+        // in turn taking them back to the first slide! */ 
+        // slidePosition = 0; /*if slide position equals total slide, go back to zero*/
+    // } else {
+        // slidePosition ++; /*if NOT, then increment by 1*/
+    // }
+    // slides[slidePosition].classList.add("carousel-item-visible"); /*with the array slides[slidesPosition] if 0, 1 or 2 if we r on that slide we want 
+    // to make it visible*/
+
+        // }
+
+
+// function moveToPrevSlide() {
     //console.log("move to prev slide");
 
-}
+//}
 
 //console.log(totalSlides)
 
@@ -82,3 +102,4 @@ function moveToPrevSlide() {
     accessing an array element is as simple as 'slides[slidePosition]'
     4) Test out your next button by clicking on it, you'll see there's some clean up to do in the next Scrimba cast!
 */
+
